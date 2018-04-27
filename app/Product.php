@@ -18,12 +18,17 @@ class Product extends Model
     protected $date = ['deleted_at'];
 
     protected $fillable = [
-      'name',
-      'description',
-      'quantity',
-      'status',
-      'image',
-      'seller_id',
+        'name',
+        'description',
+        'quantity',
+        'status',
+        'image',
+        'seller_id',
+    ];
+
+    /** to hide pivot column from the collection */
+    protected $hidden = [
+        'pivot'
     ];
 
     public function isAvailable()

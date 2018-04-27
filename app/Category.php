@@ -15,6 +15,10 @@ class Category extends Model
         'name',
         'description',
     ];
+    /** to hide pivot column from the collection */
+    protected $hidden = [
+        'pivot'
+    ];
 
     public function products()
     {
